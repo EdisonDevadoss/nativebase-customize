@@ -12,9 +12,9 @@ import {
   StyleSheet,
   ScrollView,
   View,
-  Text,
   StatusBar,
 } from 'react-native';
+import {Text} from 'native-base';
 
 import {
   Header,
@@ -40,20 +40,35 @@ const App: () => React$Node = () => {
           )}
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
+              <Text style={[styles.sectionTitle, {fontFamily: 'Product Sans'}]}>
+                Step One
+              </Text>
+              <Text
+                style={[
+                  styles.sectionDescription,
+                  {fontFamily: 'Product Sans Medium'},
+                ]}>
                 Edit <Text style={styles.highlight}>App.js</Text> to change this
                 screen and then come back to see your edits.
               </Text>
             </View>
             <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
+              <Text
+                style={[styles.sectionTitle, {fontFamily: 'ProductSans-Bold'}]}>
+                See Your Changes
+              </Text>
               <Text style={styles.sectionDescription}>
                 <ReloadInstructions />
               </Text>
             </View>
             <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
+              <Text
+                style={[
+                  styles.sectionTitle,
+                  {fontFamily: 'Ageo Personal Use'},
+                ]}>
+                Debug
+              </Text>
               <Text style={styles.sectionDescription}>
                 <DebugInstructions />
               </Text>
